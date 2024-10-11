@@ -14,10 +14,11 @@ body {
 .header {
     position: relative;
     max-width: 100%;
+
 }
 
 img.header-img {
-    width: 100vw; /* Rozciąga zdjęcie na pełną szerokość strony */
+    max-width: 100%;
     height: auto;
     display: block;
 }
@@ -28,7 +29,7 @@ h2.header-text {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #976362;
-    font-size: 2vw; /* Użycie jednostek względnych, aby skalowało się z ekranem */
+    font-size: 2em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     text-align: center;
 }
@@ -40,7 +41,7 @@ h2.header-text {
 }
 
 .left-baner {
-    position: fixed;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
@@ -50,7 +51,7 @@ h2.header-text {
 }
 
 .right-baner {
-    position: fixed;
+    position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
@@ -277,25 +278,10 @@ h1 span {
     .description-flex-container {
         margin-top: 30px;
         text-align: center;
-        font-size: 18px;
-    }
-
-    .left-baner, .right-baner {
-        width: 5%; /* Zmniejszenie szerokości banerów na mniejszych ekranach */
     }
 }
 
 @media (max-width: 400px) {
-    .input {
-        width: 30px; /* Mniejsze kropki na bardzo małych ekranach */
-        height: 30px;
-    }
-    .input span::after {
-        font-size: 10px;
-    }
-    .description-flex-container {
-        font-size: 16px;
-    }
     body {
         min-height: 950px;
     }
